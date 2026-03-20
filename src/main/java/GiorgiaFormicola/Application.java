@@ -112,12 +112,16 @@ public class Application {
                         System.out.println("Type a PRICE to FILTER the catalog or 0 to QUIT");
                         double maxPrice = Double.parseDouble(scanner.nextLine());
                         if (maxPrice == 0) break;
-                        try {
-                            catalog.searchByPrice(maxPrice).forEach(System.out::println);
-                            break;
-                        } catch (RuntimeException e) {
-                            System.out.println(e.getMessage());
+                        if (maxPrice < 0) System.out.println("You must type a positive number, try again!");
+                        else {
+                            try {
+                                catalog.searchByPrice(maxPrice).forEach(System.out::println);
+                                break;
+                            } catch (RuntimeException e) {
+                                System.out.println(e.getMessage());
+                            }
                         }
+
                     }
                 }
 
@@ -153,21 +157,24 @@ public class Application {
                     //Qui come scrivo anche nella classe Collection avrei voluto implementare ulteriormente lo scanner
                     // per far scegliere all'utente che tipo di dato modificare e poi in base a quello richiamare la stessa funzione
                     //con parametri diversi
-                  
+
                     while (true) {
                         System.out.println("Type the ID of the game you want to MODIFY or 0 to QUIT");
                         int IDtoModify = Integer.parseInt(scanner.nextLine());
 
                         System.out.println("Type the NEW PRICE of the game or 0 to QUIT");
                         double newPrice = Double.parseDouble(scanner.nextLine());
-
                         if (IDtoModify == 0 || newPrice == 0) break;
-                        try {
-                            catalog.modifyElementByID(IDtoModify, newPrice);
-                            break;
-                        } catch (RuntimeException e) {
-                            System.out.println(e.getMessage());
+                        if (newPrice < 0) System.out.println("You must type a positive number, try again!");
+                        else {
+                            try {
+                                catalog.modifyElementByID(IDtoModify, newPrice);
+                                break;
+                            } catch (RuntimeException e) {
+                                System.out.println(e.getMessage());
+                            }
                         }
+
                     }
                 }
 
