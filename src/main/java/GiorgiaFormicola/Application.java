@@ -69,6 +69,8 @@ public class Application {
                         if (gameToAddNumber < 1 || gameToAddNumber > 8) {
                             System.out.println("You must type a number from 1 to 8, try again!\n");
                         } else {
+                            //Avrei voluto implementare ulteriormente lo scanner per far creare da 0 all'utente un
+                            // nuovo Game con controlli sul costruttore annessi ma non ho fatto in tempo 
                             Game gameToAdd = switch (gameToAddNumber) {
                                 case 1 -> videogame1;
                                 case 2 -> videogame2;
@@ -183,8 +185,8 @@ public class Application {
         }
 
 
+        // TESTS BEFORE SCANNER
         /*catalog.forEach(System.out::println);*/
-
 
        /* try {
             catalog.addElement(videogame1);
