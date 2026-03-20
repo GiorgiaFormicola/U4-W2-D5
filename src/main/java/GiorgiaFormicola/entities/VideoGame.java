@@ -4,7 +4,7 @@ import GiorgiaFormicola.enums.Genre;
 
 import java.time.Duration;
 
-public class VideoGame {
+public class VideoGame extends Game {
     //ATTRIBUTES
     private String platform;
     private Duration gameTime;
@@ -12,7 +12,7 @@ public class VideoGame {
 
     //CONSTRUCTOR
     public VideoGame(String title, int releaseDate, double price, String platform, int hours, Genre genre) {
-        super();
+        super(title, releaseDate, price);
         this.platform = platform;
         this.gameTime = Duration.ofHours(hours);
         this.genre = genre;

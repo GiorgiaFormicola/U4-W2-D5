@@ -2,14 +2,14 @@ package GiorgiaFormicola.entities;
 
 import java.time.Duration;
 
-public class BoardGame {
+public class BoardGame extends Game {
     //ATTRIBUTES
     private int numberOfPlayers;
     private Duration matchTime;
 
     //CONSTRUCTOR
     public BoardGame(String title, int releaseDate, double price, int numberOfPlayers, int minutes) {
-        super();
+        super(title, releaseDate, price);
         this.numberOfPlayers = numberOfPlayers;
         this.matchTime = Duration.ofMinutes(minutes);
     }
