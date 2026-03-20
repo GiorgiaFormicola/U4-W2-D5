@@ -11,7 +11,7 @@ public abstract class Game {
     private Year releaseDate;
     private double price;
 
-    //COSNTRUCTOR
+    //CONSTRUCTOR
     public Game(String title, int releaseDate, double price) {
         gamesAmount++;
         this.ID = gamesAmount;
@@ -37,4 +37,11 @@ public abstract class Game {
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "ID=" + ID +
+                ", title='" + title + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", price=" + price;
+    }
 }
