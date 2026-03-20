@@ -37,6 +37,13 @@ public abstract class Game {
         return price;
     }
 
+    //SETTERS
+
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
         return "ID=" + ID +
