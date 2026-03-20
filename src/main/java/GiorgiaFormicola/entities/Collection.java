@@ -59,11 +59,11 @@ public class Collection extends ArrayList<Game> {
             OptionalDouble maxPrice = stream().mapToDouble(product -> product.getPrice()).max();
             List<Game> mostExpensiveGame = stream().filter(game -> game.getPrice() == maxPrice.getAsDouble()).toList();
 
-            System.out.println((mostExpensiveGame.size() == 1 ? "Most expensive game in the catalog:" : "Most expensive games in the catalog:").toUpperCase());
+            System.out.println((mostExpensiveGame.size() == 1 ? "\nMost expensive game in the catalog:" : "\nMost expensive games in the catalog:").toUpperCase());
             mostExpensiveGame.forEach(System.out::println);
 
             Double gamesAveragePrice = stream().mapToDouble(game -> game.getPrice()).average().getAsDouble();
-            System.out.println("THE AVERAGE PRICE OF THE GAMES IN THE CATALOG IS: " + gamesAveragePrice);
+            System.out.println("\nTHE AVERAGE PRICE OF THE GAMES IN THE CATALOG IS: " + gamesAveragePrice);
 
         }
 
