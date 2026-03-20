@@ -36,8 +36,8 @@ public class VideoGame extends Game {
     public String toString() {
         return "VideoGame {" +
                 super.toString() +
-                "platform='" + platform + '\'' +
-                ", gameTime=" + gameTime +
+                ", platform='" + platform + '\'' +
+                ", gameTime=" + gameTime.toHours() + "h" +
                 ", genre=" + genre +
                 '}';
     }

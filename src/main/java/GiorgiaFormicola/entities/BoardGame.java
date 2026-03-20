@@ -27,8 +27,8 @@ public class BoardGame extends Game {
     public String toString() {
         return "BoardGame {" +
                 super.toString() +
-                "numberOfPlayers=" + numberOfPlayers +
-                ", matchTime=" + matchTime +
+                ", numberOfPlayers=" + numberOfPlayers +
+                ", matchTime=" + matchTime.toMinutes() + "min" +
                 '}';
     }
 }
