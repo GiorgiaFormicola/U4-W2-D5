@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String[] args) {
+
         Game videogame1 = new VideoGame("GTA", 2020, 40.5, "PlayStastion", 130, Genre.RACING);
         Game videogame2 = new VideoGame("Halo", 2023, 22.0, "PC", 300, Genre.ACTION);
         Game videogame3 = new VideoGame("The Sims", 2010, 15.0, "Xbox", 500, Genre.SIMULATION);
@@ -70,7 +71,7 @@ public class Application {
                             System.out.println("You must type a number from 1 to 8, try again!\n");
                         } else {
                             //Avrei voluto implementare ulteriormente lo scanner per far creare da 0 all'utente un
-                            // nuovo Game con controlli sul costruttore annessi ma non ho fatto in tempo 
+                            // nuovo Game con controlli sul costruttore annessi ma non ho fatto in tempo
                             Game gameToAdd = switch (gameToAddNumber) {
                                 case 1 -> videogame1;
                                 case 2 -> videogame2;
@@ -149,6 +150,10 @@ public class Application {
                 }
 
                 if (operationNumber == 6) {
+                    //Qui come scrivo anche nella classe Collection avrei voluto implementare ulteriormente lo scanner
+                    // per far scegliere all'utente che tipo di dato modificare e poi in base a quello richiamare la stessa funzione
+                    //con parametri diversi
+                  
                     while (true) {
                         System.out.println("Type the ID of the game you want to MODIFY or 0 to QUIT");
                         int IDtoModify = Integer.parseInt(scanner.nextLine());
@@ -183,6 +188,8 @@ public class Application {
                 System.out.println("ERROR: you must type a number, try again!");
             }
         }
+        //Per quanto riguarda le eccezioni avrei voluto gestirle meglio creandone qualcuna custom,
+        // ma non ho fatto in tempo
 
 
         // TESTS BEFORE SCANNER
