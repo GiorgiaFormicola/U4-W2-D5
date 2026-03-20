@@ -2,19 +2,19 @@ package GiorgiaFormicola.entities;
 
 import GiorgiaFormicola.enums.Genre;
 
-import java.time.LocalTime;
+import java.time.Duration;
 
 public class VideoGame {
     //ATTRIBUTES
     private String platform;
-    private LocalTime gameTime;
+    private Duration gameTime;
     private Genre genre;
 
     //CONSTRUCTOR
-    public VideoGame(String title, int releaseDate, double price, String platform, int hours, int minutes, Genre genre) {
+    public VideoGame(String title, int releaseDate, double price, String platform, int hours, Genre genre) {
         super();
         this.platform = platform;
-        this.gameTime = LocalTime.of(hours, minutes);
+        this.gameTime = Duration.ofHours(hours);
         this.genre = genre;
     }
 
@@ -24,7 +24,7 @@ public class VideoGame {
         return platform;
     }
 
-    public LocalTime getGameTime() {
+    public Duration getGameTime() {
         return gameTime;
     }
 
